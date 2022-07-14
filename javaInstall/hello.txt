@@ -1,0 +1,17 @@
+package firstPackage;
+
+import java.awt.Toolkit;
+
+import javax.swing.JOptionPane;
+
+public class Hello {
+
+	final static String MSG = "Hello ☺";
+	public static void main(String[] args) {
+		System.out.println(MSG);
+		Toolkit.getDefaultToolkit().beep();
+		JOptionPane.showMessageDialog(null, MSG);
+
+	}
+
+}
