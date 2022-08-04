@@ -1,0 +1,80 @@
+PS C:\Users\Djamel\Workspace\JSE\javaSetup\javaInstall> dir
+
+
+    Répertoire : C:\Users\Djamel\Workspace\JSE\javaSetup\javaInstall
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     mercredi  27  juillet                  Installer l’environnement de développement java_img
+                    2022     19:08
+-a----  jeudi  14  juillet  2022          1628160 ECLIPSE_JSE.docx
+                             11:47
+-a----  mardi  12  juillet  2022              317 hello.txt
+                             20:16
+-a----  mercredi  3  août  2022           1639681 Installer l’environnement de développement java.docx
+                             22:05
+-a----     mercredi  27  juillet           262477 Installer l’environnement de développement java.pptx
+                    2022     19:22
+-a----     mercredi  13  juillet          2575924 Java et Eclipse.docx
+                    2022     23:25
+
+
+PS C:\Users\Djamel\Workspace\JSE\javaSetup\javaInstall> Get-FileHash hello.txt -a sha512
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA512          F41047493698E0E77D6AA88D490656998EE4FD634776B040CA60C69621A36C8FFB0... C:\Users\Djamel\Workspace\JSE\javaSetup...
+
+
+PS C:\Users\Djamel\Workspace\JSE\javaSetup\javaInstall> Get-FileHash hello.txt -a sha128
+Get-FileHash : Impossible de valider l'argument sur le paramètre «Algorithm». L'argument «sha128» n'appartient pas au jeu «
+SHA1;SHA256;SHA384;SHA512;MACTripleDES;MD5;RIPEMD160» spécifié par l'attribut ValidateSet. Indiquez un argument qui se trouve
+dans le jeu et réessayez.
+Au caractère Ligne:1 : 27
++ Get-FileHash hello.txt -a sha128
++                           ~~~~~~
+    + CategoryInfo          : InvalidData : (:) [Get-FileHash], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Get-FileHash
+
+PS C:\Users\Djamel\Workspace\JSE\javaSetup\javaInstall> Get-FileHash hello.txt -a md5
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+MD5             FEAC9648BD18AD998E9549D690F710F3                                       C:\Users\Djamel\Workspace\JSE\javaSetup...
+
+
+PS C:\Users\Djamel\Workspace\JSE\javaSetup\javaInstall> Get-FileHash hello.txt -a sha512
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA512          F41047493698E0E77D6AA88D490656998EE4FD634776B040CA60C69621A36C8FFB0... C:\Users\Djamel\Workspace\JSE\javaSetup...
+
+
+PS C:\Users\Djamel\Workspace\JSE\javaSetup\javaInstall> Get-FileHash hello.txt -a sha512 > hasha512.txt
+PS C:\Users\Djamel\Workspace\JSE\javaSetup\javaInstall> dir
+
+
+    Répertoire : C:\Users\Djamel\Workspace\JSE\javaSetup\javaInstall
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     mercredi  27  juillet                  Installer l’environnement de développement java_img
+                    2022     19:08
+-a----  jeudi  14  juillet  2022          1628160 ECLIPSE_JSE.docx
+                             11:47
+-a----  mercredi  3  août  2022               800 hasha512.txt
+                             22:34
+-a----  mardi  12  juillet  2022              317 hello.txt
+                             20:16
+-a----  mercredi  3  août  2022           1639681 Installer l’environnement de développement java.docx
+                             22:05
+-a----     mercredi  27  juillet           262477 Installer l’environnement de développement java.pptx
+                    2022     19:22
+-a----     mercredi  13  juillet          2575924 Java et Eclipse.docx
+                    2022     23:25
+
+
+PS C:\Users\Djamel\Workspace\JSE\javaSetup\javaInstall> Get-FileHash hello.txt -a sha512 |Format-List | Out-File hasha512.txt
+PS C:\Users\Djamel\Workspace\JSE\javaSetup\javaInstall>
